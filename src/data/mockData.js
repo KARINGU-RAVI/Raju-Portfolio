@@ -18,8 +18,6 @@ import brand7 from './brand-identity-images/brand_7.jpg';
 import brand8 from './brand-identity-images/brand_8.jpg';
 
 // Motion Graphics Videos
-// import motion1 from './Motion-Graphics-Projects/motion_1.mp4';
-const motion1 = "https://drive.google.com/file/d/1o2kskwWBzL5Ne-blkaXaGR02rl1wzbHX/view?usp=sharing"; // Replace with actual direct video link or smaller file
 import motion2 from './Motion-Graphics-Projects/motion_2.mp4';
 import motion3 from './Motion-Graphics-Projects/motion_3.mp4';
 import motion4 from './Motion-Graphics-Projects/motion_4.mp4';
@@ -33,6 +31,9 @@ import social2 from './Social-Media-Content-Creation/social_2.jpg';
 import social3 from './Social-Media-Content-Creation/social_3.jpg';
 import social4 from './Social-Media-Content-Creation/social_4.jpg';
 import social5 from './Social-Media-Content-Creation/social_5.jpg';
+
+// Variables & External Links
+const motion1 = "https://drive.google.com/file/d/1o2kskwWBzL5Ne-blkaXaGR02rl1wzbHX/view?usp=sharing";
 
 export const personalData = {
     name: "KARINGU RAJU",
