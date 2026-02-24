@@ -33,7 +33,6 @@ import social4 from './Social-Media-Content-Creation/social_4.jpg';
 import social5 from './Social-Media-Content-Creation/social_5.jpg';
 
 // Variables & External Links
-const motion1 = "https://drive.google.com/file/d/1o2kskwWBzL5Ne-blkaXaGR02rl1wzbHX/view?usp=sharing";
 
 export const personalData = {
     name: "KARINGU RAJU",
@@ -89,7 +88,7 @@ export const experienceData = [{
     period: "2022 - 2023",
     description: "Created engaging motion graphics for social media campaigns, title sequences, and promotional content.",
     type: "project",
-    images: [motion1, motion2, motion3, motion4, motion5, motion6, motion7]
+    images: [motion2, motion3, motion4, motion5, motion6, motion7]
 },
 {
     id: 4,

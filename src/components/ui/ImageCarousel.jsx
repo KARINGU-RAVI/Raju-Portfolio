@@ -114,7 +114,7 @@ const ImageCarousel = ({ images = [] }) => {
             <button
               key={index}
               onClick={() => goToSlide(index)}
-              className={`relative flex-shrink-0 w-20 h-14 rounded-lg overflow-hidden transition-all duration-300 shadow-md ${index === currentIndex
+              className={`relative flex-shrink-0 w-16 h-12 sm:w-20 sm:h-14 rounded-lg overflow-hidden transition-all duration-300 shadow-md ${index === currentIndex
                 ? 'ring-2 ring-teal-500 scale-105'
                 : 'opacity-50 hover:opacity-100'
                 }`}
@@ -139,12 +139,12 @@ const ImageCarousel = ({ images = [] }) => {
               {/* Close Button */}
               <motion.button
                 onClick={() => setIsFullscreen(false)}
-                className="absolute top-8 right-8 z-[10000] text-white/80 hover:text-white p-4 bg-white/10 rounded-full backdrop-blur-md shadow-2xl"
+                className="absolute top-4 right-4 sm:top-8 sm:right-8 z-[10000] text-white/80 hover:text-white p-3 sm:p-4 bg-white/10 rounded-full backdrop-blur-md shadow-2xl"
                 whileHover={{ scale: 1.1, backgroundColor: "rgba(255, 255, 255, 0.2)" }}
                 whileTap={{ scale: 0.95 }}
                 aria-label="Close fullscreen"
               >
-                <X className="w-10 h-10 md:w-8 md:h-8" />
+                <X className="w-8 h-8 md:w-8 md:h-8" />
               </motion.button>
 
               {/* Media Container */}
@@ -209,9 +209,9 @@ const ImageCarousel = ({ images = [] }) => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.2 }}
-                  className="absolute bottom-12 left-1/2 transform -translate-x-1/2 bg-white/10 text-white px-8 py-4 rounded-full backdrop-blur-xl shadow-2xl border border-white/10"
+                  className="absolute bottom-6 sm:bottom-12 left-1/2 transform -translate-x-1/2 bg-white/10 text-white px-6 py-2 sm:px-8 sm:py-4 rounded-full backdrop-blur-xl shadow-2xl border border-white/10"
                 >
-                  <span className="text-lg font-semibold tracking-wider">
+                  <span className="text-sm sm:text-lg font-semibold tracking-wider">
                     {currentIndex + 1} / {images.length}
                   </span>
                 </motion.div>

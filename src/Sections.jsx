@@ -39,7 +39,7 @@ export const Hero = () => {
                         <motion.p initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.2 }} className="text-teal-600 dark:text-teal-400 font-medium mb-4 text-lg">
                             Hello, I'm
                         </motion.p>
-                        <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
+                        <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-6">
                             <motion.span initial={{ opacity: 0, x: -50 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.3, duration: 0.8 }} className="bg-gradient-to-r from-gray-900 to-gray-700 dark:from-white dark:to-gray-300 bg-clip-text text-transparent block">
                                 {personalData.name}
                             </motion.span>
@@ -105,7 +105,7 @@ export const About = () => {
                     <motion.div variants={itemVariants}>
                         <div className="relative">
                             <motion.div whileHover={{ scale: 1.02 }} className="relative z-10 rounded-2xl overflow-hidden shadow-2xl">
-                                <img src={aboutData.image} alt="Profile" className="w-full h-[650px] object-cover" />
+                                <img src={aboutData.image} alt="Profile" className="w-full h-auto max-h-[500px] lg:max-h-[650px] object-cover" />
                             </motion.div>
                             <div className="absolute -bottom-6 -right-6 w-72 h-72 bg-gradient-to-br from-teal-400/20 to-coral-400/20 rounded-2xl -z-10" />
                             <div className="absolute -top-6 -left-6 w-40 h-40 bg-gradient-to-br from-coral-400/20 to-teal-400/20 rounded-full -z-10" />
@@ -176,7 +176,7 @@ export const Experience = () => {
                             <motion.div key={exp.id} variants={itemVariants} className={`relative flex items-center ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
                                 <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-6 h-6 rounded-full bg-gradient-to-r from-teal-500 to-coral-500 border-4 border-white dark:border-gray-800 shadow-[0_0_15px_rgba(20,184,166,0.3)] z-10 transition-transform duration-300 hover:scale-125" />
                                 <div className={`w-full md:w-5/12 ${index % 2 === 0 ? 'md:pr-12' : 'md:pl-12'}`}>
-                                    <motion.div whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", transition: { duration: 0.3, ease: "easeOut" } }} style={{ transformZ: 0, backfaceVisibility: "hidden" }} className="bg-white dark:bg-gray-900 rounded-2xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 will-change-transform">
+                                    <motion.div whileHover={{ scale: 1.02, boxShadow: "0 20px 40px rgba(0,0,0,0.1)", transition: { duration: 0.3, ease: "easeOut" } }} style={{ transformZ: 0, backfaceVisibility: "hidden" }} className="bg-white dark:bg-gray-900 rounded-2xl p-4 sm:p-6 shadow-lg border border-gray-200 dark:border-gray-700 will-change-transform">
                                         <div className="flex items-center justify-between mb-4">
                                             <div className={`p-2 rounded-lg bg-gradient-to-r ${getTypeColor(exp.type)}`}><Briefcase className="w-5 h-5 text-white" /></div>
                                             <div className="flex items-center text-sm text-gray-500 dark:text-gray-400"><Calendar className="w-4 h-4 mr-1" />{exp.period}</div>
@@ -233,7 +233,7 @@ export const Skills = () => {
                     <motion.div key={activeCategory} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {activeSkills.map((skill, index) => (
                             <motion.div key={skill.name} initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: index * 0.1 }} className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-md hover:shadow-xl transition-shadow">
-                                <div className="flex items-center justify-between mb-4">
+                                <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                                     <h3 className="text-lg font-semibold text-gray-900 dark:text-white">{skill.name}</h3>
                                     <span className="text-sm font-bold text-teal-600 dark:text-teal-400">{skill.level}%</span>
                                 </div>
@@ -271,7 +271,7 @@ export const Projects = () => {
                     {projectsData.map((project, index) => (
                         <motion.div key={project.id} initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 0.6, delay: index * 0.2 }} whileHover={{ y: -10 }} className="group">
                             <div className="bg-white dark:bg-gray-900 rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300">
-                                <div className="relative h-64 overflow-hidden cursor-pointer group/img" style={{ transform: 'translateZ(0)' }} onClick={() => setSelectedImg(project.image)}>
+                                <div className="relative h-48 sm:h-64 overflow-hidden cursor-pointer group/img" style={{ transform: 'translateZ(0)' }} onClick={() => setSelectedImg(project.image)}>
                                     {isVideo(project.image) ? <video autoPlay loop muted playsInline src={project.image} className="w-full h-full object-cover will-change-transform group-hover:scale-105 transition-transform duration-500" /> : <motion.img whileHover={{ scale: 1.05 }} transition={{ duration: 0.5, ease: "easeOut" }} src={project.image} alt={project.title} className="w-full h-full object-cover will-change-transform" style={{ backfaceVisibility: "hidden" }} />}
                                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent pointer-events-none" />
                                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover/img:opacity-100 transition-opacity duration-300 bg-black/20"><div className="bg-white/20 backdrop-blur-md p-3 rounded-full"><ZoomIn className="w-6 h-6 text-white" /></div></div>
@@ -314,7 +314,7 @@ export const Education = () => {
                     <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} transition={{ duration: 0.6 }}>
                         <div className="h-full bg-gradient-to-br from-coral-50 to-purple-50 dark:from-coral-900/20 dark:to-purple-900/20 rounded-2xl p-8 border border-coral-200 dark:border-coral-800 shadow-lg">
                             <div className="flex items-center space-x-3 mb-6"><div className="p-3 bg-gradient-to-r from-coral-500 to-coral-600 rounded-xl"><BookOpen className="w-8 h-8 text-white" /></div><h3 className="text-2xl font-bold text-gray-900 dark:text-white">Professional Courses</h3></div>
-                            <div className="space-y-4">{coursesData.map((course, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ delay: index * 0.1 }} whileHover={{ scale: 1.03, x: 5 }} className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md flex items-center space-x-3"><div className="w-2 h-2 bg-gradient-to-r from-coral-500 to-purple-500 rounded-full" /><p className="text-gray-900 dark:text-white font-medium">{course}</p></motion.div>))}</div>
+                            <div className="space-y-4">{coursesData.map((course, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }} transition={{ delay: index * 0.1 }} whileHover={{ scale: 1.03, x: 5 }} className="bg-white dark:bg-gray-800 rounded-xl p-4 shadow-md flex items-center space-x-3"><div className="w-2 h-2 shrink-0 bg-gradient-to-r from-coral-500 to-purple-500 rounded-full" /><p className="text-gray-900 dark:text-white font-medium text-sm sm:text-base">{course}</p></motion.div>))}</div>
                         </div>
                     </motion.div>
                 </div>
@@ -340,13 +340,13 @@ export const Availability = () => {
                     <div className="w-20 h-1 bg-gradient-to-r from-teal-600 to-coral-600 mx-auto mb-6" />
                     <p className="text-gray-600 dark:text-gray-300 max-w-2xl mx-auto text-lg">Ready to bring your creative vision to life</p>
                 </motion.div>
-                <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <div ref={ref} className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 mb-12">
                     {availabilityOptions.map((option, index) => (
                         <motion.div key={option.id} initial={{ opacity: 0, y: 50 }} animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 50 }} transition={{ duration: 0.6, delay: index * 0.2 }} whileHover={{ y: -10, scale: 1.02 }} className="group">
-                            <div className={`h-full bg-gradient-to-br ${option.bgColor} rounded-2xl p-6 border ${option.borderColor} shadow-lg hover:shadow-2xl transition-all`}>
-                                <div className={`w-16 h-16 bg-gradient-to-r ${option.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}><option.icon className="w-8 h-8 text-white" /></div>
-                                <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-3">{option.title}</h3>
-                                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{option.description}</p>
+                            <div className={`h-full bg-gradient-to-br ${option.bgColor} rounded-2xl p-5 sm:p-6 border ${option.borderColor} shadow-lg hover:shadow-2xl transition-all`}>
+                                <div className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-r ${option.gradient} rounded-xl flex items-center justify-center mb-4 group-hover:scale-110 transition-transform`}><option.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" /></div>
+                                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 dark:text-white mb-2 sm:mb-3">{option.title}</h3>
+                                <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">{option.description}</p>
                             </div>
                         </motion.div>
                     ))}
@@ -406,11 +406,11 @@ export const Contact = () => {
                         <motion.a href={personalData.resume} target="_blank" rel="noopener noreferrer" whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="w-full px-6 py-4 bg-gradient-to-r from-teal-600 to-coral-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2"><Download className="w-5 h-5" /><span>Download Resume</span></motion.a>
                     </motion.div>
                     <motion.div initial={{ opacity: 0, x: 50 }} animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }} transition={{ duration: 0.6 }}>
-                        <form onSubmit={handleSubmit} className="space-y-6">
-                            <div><label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Name</label><input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all" placeholder="John Doe" /></div>
-                            <div><label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Email</label><input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all" placeholder="john@example.com" /></div>
-                            <div><label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Your Message</label><textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={6} className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all resize-none" placeholder="Tell me about your project..." /></div>
-                            <motion.button type="submit" disabled={isSubmitting} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full px-6 py-4 bg-gradient-to-r from-teal-600 to-coral-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed">{isSubmitting ? <span>Sending...</span> : <><Send className="w-5 h-5" /><span>Send Message</span></>}</motion.button>
+                        <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+                            <div><label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Your Name</label><input type="text" id="name" name="name" value={formData.name} onChange={handleChange} required className="w-full px-4 py-2 sm:py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all text-sm sm:text-base" placeholder="John Doe" /></div>
+                            <div><label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Your Email</label><input type="email" id="email" name="email" value={formData.email} onChange={handleChange} required className="w-full px-4 py-2 sm:py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all text-sm sm:text-base" placeholder="john@example.com" /></div>
+                            <div><label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1 sm:mb-2">Your Message</label><textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={4} className="w-full px-4 py-2 sm:py-3 bg-gray-50 dark:bg-gray-800 border border-gray-300 dark:border-gray-700 rounded-xl focus:outline-none focus:ring-2 focus:ring-teal-500 dark:text-white transition-all resize-none text-sm sm:text-base" placeholder="Tell me about your project..." /></div>
+                            <motion.button type="submit" disabled={isSubmitting} whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }} className="w-full px-6 py-3 sm:py-4 bg-gradient-to-r from-teal-600 to-coral-600 text-white rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all flex items-center justify-center space-x-2 disabled:opacity-50 disabled:cursor-not-allowed text-sm sm:text-base">{isSubmitting ? <span>Sending...</span> : <><Send className="w-5 h-5" /><span>Send Message</span></>}</motion.button>
                         </form>
                     </motion.div>
                 </div>
