@@ -28,7 +28,7 @@ function App() {
     };
 
     return (
-        <div className="App selection:bg-teal-100 dark:selection:bg-teal-900/40">
+        <div className="App selection:bg-teal-100 dark:selection:bg-teal-900/40 overflow-x-hidden w-full relative">
             <Navbar theme={theme} toggleTheme={toggleTheme} />
             <main>
                 <Hero />

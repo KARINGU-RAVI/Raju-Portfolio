@@ -134,7 +134,7 @@ const ImageCarousel = ({ images = [] }) => {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               className="fixed inset-0 bg-black z-[9999] flex items-center justify-center transition-colors duration-500 overflow-hidden"
-              style={{ width: '100vw', height: '100vh', top: 0, left: 0 }}
+              style={{ position: 'fixed', top: 0, left: 0, right: 0, bottom: 0 }}
             >
               {/* Close Button */}
               <motion.button
