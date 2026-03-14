@@ -20,22 +20,21 @@ import brand9 from './brand-identity-images/brand_9.jpg';
 import brand10 from './brand-identity-images/brand_10.jpg';
 
 // Motion Graphics Videos
-import motion2 from './Motion-Graphics-Projects/motion_2.mp4';
-import motion3 from './Motion-Graphics-Projects/motion_3.mp4';
-import motion4 from './Motion-Graphics-Projects/motion_4.mp4';
-import motion5 from './Motion-Graphics-Projects/motion_5.mp4';
-import motion6 from './Motion-Graphics-Projects/motion_6.mp4';
-import motion7 from './Motion-Graphics-Projects/motion_7.mp4';
-import motion8 from './Motion-Graphics-Projects/motion_8.mp4';
-// import motion9 from './Motion-Graphics-Projects/motion_9.mp4';
 
-// Social Media Images
-import motion9 from './Social-Media-Content-Creation/motion_9.mp4';
-import motion10 from './Social-Media-Content-Creation/motion_10.mp4';
-import motion11 from './Social-Media-Content-Creation/motion_11.mp4';
-import motion12 from './Social-Media-Content-Creation/motion_12.mp4';
-import motion13 from './Social-Media-Content-Creation/motion_13.mp4';
-import motion14 from './Social-Media-Content-Creation/motion_14.mp4';
+// Cloudinary video URLs
+const motion2 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473215/motion_2_emaaic.mp4";
+const motion3 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473221/motion_3_v4ubpz.mp4";
+const motion4 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473203/motion_4_h6n7e1.mp4";
+const motion5 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473213/motion_5_aixtyn.mp4";
+const motion6 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473199/motion_6_lkj0oa.mp4";
+const motion7 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473205/motion_7_zelbgz.mp4";
+const motion8 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473221/motion_8_mg4rm8.mp4";
+const motion9 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773474387/motion_9.mp4";
+const motion10 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473447/motion_10_ss3sbo.mp4";
+const motion11 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473391/motion_11_oskupo.mp4";
+const motion12 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473384/motion_12_rgydna.mp4";
+const motion13 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473444/motion_13_oxdvvp.mp4";
+const motion14 = "https://res.cloudinary.com/djstxrg0a/video/upload/v1773473419/motion_14_iw4fqr.mp4";
 
 
 // Variables & External Links
