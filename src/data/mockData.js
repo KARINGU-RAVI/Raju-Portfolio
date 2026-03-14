@@ -16,6 +16,8 @@ import profile from './brand-identity-images/portfolio-profile.png';
 import brand6 from './brand-identity-images/brand_6.jpg';
 import brand7 from './brand-identity-images/brand_7.jpg';
 import brand8 from './brand-identity-images/brand_8.jpg';
+import brand9 from './brand-identity-images/brand_9.jpg';
+import brand10 from './brand-identity-images/brand_10.jpg';
 
 // Motion Graphics Videos
 import motion2 from './Motion-Graphics-Projects/motion_2.mp4';
@@ -24,13 +26,17 @@ import motion4 from './Motion-Graphics-Projects/motion_4.mp4';
 import motion5 from './Motion-Graphics-Projects/motion_5.mp4';
 import motion6 from './Motion-Graphics-Projects/motion_6.mp4';
 import motion7 from './Motion-Graphics-Projects/motion_7.mp4';
+import motion8 from './Motion-Graphics-Projects/motion_8.mp4';
+// import motion9 from './Motion-Graphics-Projects/motion_9.mp4';
 
 // Social Media Images
-import social1 from './Social-Media-Content-Creation/social_1.jpg';
-import social2 from './Social-Media-Content-Creation/social_2.jpg';
-import social3 from './Social-Media-Content-Creation/social_3.jpg';
-import social4 from './Social-Media-Content-Creation/social_4.jpg';
-import social5 from './Social-Media-Content-Creation/social_5.jpg';
+import motion9 from './Social-Media-Content-Creation/motion_9.mp4';
+import motion10 from './Social-Media-Content-Creation/motion_10.mp4';
+import motion11 from './Social-Media-Content-Creation/motion_11.mp4';
+import motion12 from './Social-Media-Content-Creation/motion_12.mp4';
+import motion13 from './Social-Media-Content-Creation/motion_13.mp4';
+import motion14 from './Social-Media-Content-Creation/motion_14.mp4';
+
 
 // Variables & External Links
 
@@ -47,9 +53,9 @@ export const personalData = {
         partTime: true
     },
     social: {
-        linkedin: "#",
+        linkedin: "http://www.linkedin.com/in/raju-karingu",
         github: "#",
-        instagram: "#",
+        instagram: "https://www.instagram.com/aesthetic_sashaa/",
         twitter: "#"
     },
     resume: "https://drive.google.com/file/d/1o2kskwWBzL5Ne-blkaXaGR02rl1wzbHX/view?usp=sharing"
@@ -68,7 +74,7 @@ export const aboutData = {
 
 export const experienceData = [{
     id: 1,
-    title: "Freelance Projects",
+    title: "Photoshop Projects",
     period: "2023 - Present",
     description: "Delivered creative solutions for various clients including brand identity design, social media content, and promotional videos.",
     type: "freelance",
@@ -76,27 +82,27 @@ export const experienceData = [{
 },
 {
     id: 2,
-    title: "Brand Identity Design",
+    title: "Illustrator Projects",
     period: "2023",
     description: "Conceptualized and executed complete brand suites including logos, packaging, and corporate stationery for local businesses.",
     type: "project",
-    images: [brand2, brand3, brand4, brand5, brand6, brand7, brand8]
+    images: [brand2, brand3, brand4, brand5, brand6, brand7, brand8, brand9, brand10]
 },
 {
     id: 3,
-    title: "Motion Graphics Projects",
+    title: "After Effects Projects",
     period: "2022 - 2023",
     description: "Created engaging motion graphics for social media campaigns, title sequences, and promotional content.",
     type: "project",
-    images: [motion2, motion3, motion4, motion5, motion6, motion7]
+    images: [ motion2, motion3, motion4, motion5, motion6, motion7, motion8]
 },
 {
     id: 4,
-    title: "Social Media Content Creation",
+    title: "Premiere Pro Projects",
     period: "2022 - Present",
     description: "Designed and animated social media content for various brands, focusing on engagement and visual storytelling.",
     type: "content",
-    images: [social1, social2, social3, social4, social5]
+    images: [motion9,motion13, motion10 ,motion12, motion11, motion14]
 }
 ];
 
@@ -177,17 +183,8 @@ export const projectsData = [{
     description: "Participated in a competitive design challenge where I conceptualized and executed a complete visual solution under time constraints, demonstrating strong creative thinking, branding skills, and technical expertise.",
     skills: ["Adobe Illustrator", "InDesign", "Brand Design"],
     link: "https://drive.google.com/file/d/1kLzntkEDtGEd1QKnpHYmNFJr_aU8HRu7/view",
-    image: brand6,
+    image: brand9,
     color: "#FFE5B4"
-},
-{
-    id: 2,
-    title: "Eco-Friendly Packaging Solution",
-    description: "Designed sustainable packaging for a premium wellness brand, focusing on minimalistic aesthetics and earth-friendly materials.",
-    skills: ["Adobe Illustrator", "Packaging Design", "Visualization"],
-    link: "https://drive.google.com/file/d/1kLzntkEDtGEd1QKnpHYmNFJr_aU8HRu7/view",
-    image: brand2,
-    color: "#D1F2EB"
 }];
 
 export const educationData = [{
