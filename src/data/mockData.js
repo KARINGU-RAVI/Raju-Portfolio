@@ -57,7 +57,7 @@ export const personalData = {
         instagram: "https://www.instagram.com/aesthetic_sashaa/",
         twitter: "#"
     },
-    resume: "https://drive.google.com/file/d/1o2kskwWBzL5Ne-blkaXaGR02rl1wzbHX/view?usp=sharing"
+    resume: "https://drive.google.com/file/d/1lvSiWkl6EibR2Z-F2VJgXqqHb7mFq_iJ/view?usp=sharing"
 };
 
 export const contactConfig = {
